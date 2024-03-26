@@ -459,6 +459,10 @@ class __DatePickerContentPopUpState extends State<_DatePickerContentPopUp> {
   int _getDaysInMonth([int? month, int? year]) {
     year ??= DateTime.now().year;
     month ??= DateTime.now().month;
+
+    // if month is March, return 31. There's a weird bug where if I set the timezone on my computer to Newfoundland TZ, it returns 30
+    if (month == 3) return 31;
+
     return DateTimeRange(
       start: DateTime(year, month),
       end: DateTime(year, month + 1),
