@@ -508,13 +508,11 @@ class __DatePickerContentPopUpState extends State<_DatePickerContentPopUp> {
       });
 
       final monthIndex = monthsInCurrentYear.toList().indexOf(localDate.month);
-      if (widget.showMonth &&
-          widget.monthController.selectedItem != monthIndex) {
+      if (widget.monthController.selectedItem != monthIndex) {
         widget.monthController.jumpToItem(monthIndex);
       }
 
-      if (widget.showDay &&
-          widget.dayController.selectedItem != localDate.day - 1) {
+      if (widget.dayController.selectedItem != localDate.day - 1) {
         widget.dayController.jumpToItem(localDate.day - 1);
       }
     });
