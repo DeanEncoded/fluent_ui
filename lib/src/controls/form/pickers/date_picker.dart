@@ -533,8 +533,7 @@ class __DatePickerContentPopUpState extends State<_DatePickerContentPopUp> {
     final months = monthsInCurrentYear;
     final monthWidget = [
       Expanded(
-        flex:
-            widget.fieldFlex[widget.fieldOrder.indexOf(DatePickerField.month)],
+        flex: 2,
         child: () {
           final formatter = DateFormat.MMMM(locale.toString());
           // MONTH
