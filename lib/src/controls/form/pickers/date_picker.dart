@@ -343,7 +343,7 @@ class _DatePickerState extends State<DatePicker> {
 
           final monthWidgets = [
             Expanded(
-              flex: fieldFlex[fieldOrder.indexOf(DatePickerField.month)],
+              flex: 2,
               child: Padding(
                 padding: widget.contentPadding,
                 child: Text(
